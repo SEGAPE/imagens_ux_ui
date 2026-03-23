@@ -1,0 +1,155 @@
+[
+  {
+    "programa": "carteira_nacional",
+    "tipo": "logo",
+    "variante": null,
+    "arquivo": "carteira_nacional_logo.jpeg",
+    "caminho": "assets/carteira_nacional/carteira_nacional_logo.jpeg",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/carteira_nacional/carteira_nacional_logo.jpeg",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/carteira_nacional/carteira_nacional_logo.jpeg"
+  },
+  {
+    "programa": "carteira_nacional",
+    "tipo": "logo",
+    "variante": "escuro",
+    "arquivo": "carteira_nacional_logo_escuro.jpeg",
+    "caminho": "assets/carteira_nacional/carteira_nacional_logo_escuro.jpeg",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/carteira_nacional/carteira_nacional_logo_escuro.jpeg",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/carteira_nacional/carteira_nacional_logo_escuro.jpeg"
+  },
+  {
+    "programa": "cnca",
+    "tipo": "logo",
+    "variante": "bronze",
+    "arquivo": "cnca_logo_bronze.png",
+    "caminho": "assets/cnca/cnca_logo_bronze.png",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/cnca/cnca_logo_bronze.png",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/cnca/cnca_logo_bronze.png"
+  },
+  {
+    "programa": "cnca",
+    "tipo": "logo",
+    "variante": "ouro",
+    "arquivo": "cnca_logo_ouro.png",
+    "caminho": "assets/cnca/cnca_logo_ouro.png",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/cnca/cnca_logo_ouro.png",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/cnca/cnca_logo_ouro.png"
+  },
+  {
+    "programa": "cnca",
+    "tipo": "logo",
+    "variante": "prata",
+    "arquivo": "cnca_logo_prata.png",
+    "caminho": "assets/cnca/cnca_logo_prata.png",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/cnca/cnca_logo_prata.png",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/cnca/cnca_logo_prata.png"
+  },
+  {
+    "programa": "enem",
+    "tipo": "logo",
+    "variante": null,
+    "arquivo": "enem_logo.png",
+    "caminho": "assets/enem/enem_logo.png",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/enem/enem_logo.png",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/enem/enem_logo.png"
+  },
+  {
+    "programa": "mais_professores",
+    "tipo": "logo",
+    "variante": null,
+    "arquivo": "mais_professores_logo.svg",
+    "caminho": "assets/mais_professores/mais_professores_logo.svg",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/mais_professores/mais_professores_logo.svg",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/mais_professores/mais_professores_logo.svg"
+  },
+  {
+    "programa": "marajo",
+    "tipo": "logo",
+    "variante": null,
+    "arquivo": "marajo_logo.jpeg",
+    "caminho": "assets/marajo/marajo_logo.jpeg",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/marajo/marajo_logo.jpeg",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/marajo/marajo_logo.jpeg"
+  },
+  {
+    "programa": "orcamento",
+    "tipo": "icon",
+    "variante": "empenhado",
+    "arquivo": "orcamento_icon_empenhado.png",
+    "caminho": "assets/orcamento/orcamento_icon_empenhado.png",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/orcamento/orcamento_icon_empenhado.png",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/orcamento/orcamento_icon_empenhado.png"
+  },
+  {
+    "programa": "painel_ministro",
+    "tipo": "icon",
+    "variante": "aluno",
+    "arquivo": "painel_ministro_icon_aluno.jpeg",
+    "caminho": "assets/painel_ministro/painel_ministro_icon_aluno.jpeg",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/painel_ministro/painel_ministro_icon_aluno.jpeg",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/painel_ministro/painel_ministro_icon_aluno.jpeg"
+  },
+  {
+    "programa": "painel_ministro",
+    "tipo": "icon",
+    "variante": "livro",
+    "arquivo": "painel_ministro_icon_livro.jpeg",
+    "caminho": "assets/painel_ministro/painel_ministro_icon_livro.jpeg",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/painel_ministro/painel_ministro_icon_livro.jpeg",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/painel_ministro/painel_ministro_icon_livro.jpeg"
+  },
+  {
+    "programa": "painel_ministro",
+    "tipo": "icon",
+    "variante": "predio",
+    "arquivo": "painel_ministro_icon_predio.jpeg",
+    "caminho": "assets/painel_ministro/painel_ministro_icon_predio.jpeg",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/painel_ministro/painel_ministro_icon_predio.jpeg",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/painel_ministro/painel_ministro_icon_predio.jpeg"
+  },
+  {
+    "programa": "painel_ministro",
+    "tipo": "icon",
+    "variante": "todas_politicas_programas",
+    "arquivo": "painel_ministro_icon_todas_politicas_programas.jpeg",
+    "caminho": "assets/painel_ministro/painel_ministro_icon_todas_politicas_programas.jpeg",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/painel_ministro/painel_ministro_icon_todas_politicas_programas.jpeg",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/painel_ministro/painel_ministro_icon_todas_politicas_programas.jpeg"
+  },
+  {
+    "programa": "pnld",
+    "tipo": "logo",
+    "variante": null,
+    "arquivo": "pnld_logo.png",
+    "caminho": "assets/pnld/pnld_logo.png",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/pnld/pnld_logo.png",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/pnld/pnld_logo.png"
+  },
+  {
+    "programa": "rede_federal",
+    "tipo": "logo",
+    "variante": "epct",
+    "arquivo": "rede_federal_logo_epct.jpeg",
+    "caminho": "assets/rede_federal/rede_federal_logo_epct.jpeg",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/rede_federal/rede_federal_logo_epct.jpeg",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/rede_federal/rede_federal_logo_epct.jpeg"
+  },
+  {
+    "programa": "rede_federal",
+    "tipo": "logo",
+    "variante": "if",
+    "arquivo": "rede_federal_logo_if.png",
+    "caminho": "assets/rede_federal/rede_federal_logo_if.png",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/rede_federal/rede_federal_logo_if.png",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/rede_federal/rede_federal_logo_if.png"
+  },
+  {
+    "programa": "uf",
+    "tipo": "logo",
+    "variante": null,
+    "arquivo": "uf_logo.jpg",
+    "caminho": "assets/uf/uf_logo.jpg",
+    "url_raw": "https://raw.githubusercontent.com/SEGAPE/imagens_ux_ui/main/assets/uf/uf_logo.jpg",
+    "url_cdn": "https://cdn.jsdelivr.net/gh/SEGAPE/imagens_ux_ui@main/assets/uf/uf_logo.jpg"
+  }
+]
