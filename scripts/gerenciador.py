@@ -103,14 +103,14 @@ def extrair_metadados_nome(nome_arquivo: str) -> dict | None:
 def gerar_url_raw(caminho_relativo: str) -> str:
     """Retorna URL raw do GitHub para o caminho."""
     base = URL_RAW_BASE.format(repo=REPOSITORIO, branch=BRANCH)
-    caminho_limpo = caminho_relativo.replace("\\", "/")
+    caminho_limpo = Path(caminho_relativo).as_posix()
     return f"{base}/{caminho_limpo}"
 
 
 def gerar_url_cdn(caminho_relativo: str) -> str:
     """Retorna URL jsDelivr CDN para o caminho."""
     base = URL_CDN_BASE.format(repo=REPOSITORIO, branch=BRANCH)
-    caminho_limpo = caminho_relativo.replace("\\", "/")
+    caminho_limpo = Path(caminho_relativo).as_posix()
     return f"{base}/{caminho_limpo}"
 
 
@@ -174,7 +174,7 @@ def eh_imagem_valida(caminho: Path) -> tuple[bool, str | None]:
 def cmd_organizar(args: argparse.Namespace) -> None:
     """Organiza arquivos soltos em assets/ conforme a taxonomia."""
     if not DIRETORIO_ASSETS.exists():
-        print(f"Diretório '{DIRETORIO_ASSETS}' não encontrado.")
+        logger.error("Diretório '%s' não encontrado.", DIRETORIO_ASSETS)
         return
 
     arquivos_raiz = [
@@ -227,7 +227,7 @@ def cmd_organizar(args: argparse.Namespace) -> None:
 def cmd_catalogo(args: argparse.Namespace) -> None:
     """Gera o catálogo JSON com URLs de todos os assets."""
     if not DIRETORIO_ASSETS.exists():
-        print(f"Diretório '{DIRETORIO_ASSETS}' não encontrado.")
+        logger.error("Diretório '%s' não encontrado.", DIRETORIO_ASSETS)
         return
 
     assets = []
@@ -245,7 +245,7 @@ def cmd_catalogo(args: argparse.Namespace) -> None:
                 continue
 
             metadados = extrair_metadados_nome(arquivo.name)
-            caminho_relativo = str(arquivo).replace("\\", "/")
+            caminho_relativo = arquivo.as_posix()
 
             entrada = {
                 "programa": metadados["programa"] if metadados else subpasta.name,
@@ -269,12 +269,12 @@ def cmd_adicionar(args: argparse.Namespace) -> None:
     arquivo_origem = Path(args.arquivo)
 
     if not arquivo_origem.exists():
-        print(f"Arquivo não encontrado: {arquivo_origem}")
+        logger.error("Arquivo não encontrado: %s", arquivo_origem)
         return
 
     valido, extensao = eh_imagem_valida(arquivo_origem)
     if not valido:
-        print(f"Arquivo '{arquivo_origem.name}' não é uma imagem válida.")
+        logger.error("Arquivo '%s' não é uma imagem válida.", arquivo_origem.name)
         return
 
     print(f"\nArquivo: {arquivo_origem.name}")
@@ -301,7 +301,7 @@ def cmd_adicionar(args: argparse.Namespace) -> None:
 
     cmd_catalogo(args)
 
-    caminho_relativo = str(caminho_destino).replace("\\", "/")
+    caminho_relativo = caminho_destino.as_posix()
     url_cdn = gerar_url_cdn(caminho_relativo)
 
     print(f"Asset adicionado: {caminho_destino}")
@@ -311,7 +311,7 @@ def cmd_adicionar(args: argparse.Namespace) -> None:
 def cmd_publicar(args: argparse.Namespace) -> None:
     """Publica alterações no GitHub (git add, commit, push)."""
     if not shutil.which("git"):
-        print("Comando 'git' não encontrado no PATH. Instale o Git primeiro.")
+        logger.error("Comando 'git' não encontrado no PATH. Instale o Git primeiro.")
         return
 
     resultado_status = subprocess.run(
@@ -334,7 +334,7 @@ def cmd_publicar(args: argparse.Namespace) -> None:
         text=True,
     )
     if resultado_commit.returncode != 0:
-        print(f"Erro no commit: {resultado_commit.stderr}")
+        logger.error("Erro no commit: %s", resultado_commit.stderr.strip())
         return
 
     resultado_push = subprocess.run(
@@ -343,7 +343,7 @@ def cmd_publicar(args: argparse.Namespace) -> None:
         text=True,
     )
     if resultado_push.returncode != 0:
-        print(f"Erro no push: {resultado_push.stderr}")
+        logger.error("Erro no push: %s", resultado_push.stderr.strip())
         return
 
     cmd_catalogo(args)
@@ -354,10 +354,7 @@ def cmd_publicar(args: argparse.Namespace) -> None:
 def cmd_urls(args: argparse.Namespace) -> None:
     """Lista URLs CDN de todos os assets."""
     if not ARQUIVO_CATALOGO.exists():
-        print(
-            f"Catálogo não encontrado. Execute primeiro: "
-            f"python {Path(__file__).name} catalogo"
-        )
+        logger.warning("Catálogo não encontrado. Execute primeiro: python main.py catalogo")
         return
 
     with open(ARQUIVO_CATALOGO, "r", encoding="utf-8") as f:
@@ -368,7 +365,7 @@ def cmd_urls(args: argparse.Namespace) -> None:
         assets = [a for a in assets if a.get("programa") == filtro]
 
     if not assets:
-        print("Nenhum asset encontrado.")
+        logger.warning("Nenhum asset encontrado.")
         return
 
     for asset in assets:
@@ -388,9 +385,7 @@ def cmd_urls(args: argparse.Namespace) -> None:
 def cmd_formula(args: argparse.Namespace) -> None:
     """Gera uma fórmula CASE/WHEN para o Looker Studio."""
     if not ARQUIVO_CATALOGO.exists():
-        print(
-            "Catálogo não encontrado. Execute primeiro: python main.py catalogo"
-        )
+        logger.warning("Catálogo não encontrado. Execute primeiro: python main.py catalogo")
         return
 
     with open(ARQUIVO_CATALOGO, "r", encoding="utf-8") as f:

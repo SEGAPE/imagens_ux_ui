@@ -1,5 +1,28 @@
+# Caches Python
 __pycache__/
-*.pyc
-.env
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Ambiente virtual
 venv/
 .venv/
+
+# Variáveis de ambiente e segredos
+.env
+*.key
+*.pem
+
+# Logs
+logs/
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Sistemas operacionais
+.DS_Store
+Thumbs.db
